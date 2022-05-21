@@ -18,10 +18,7 @@ Example of Optimal Sharded Data Parallel (OSDP) training GPT-2.
 
 #### Implementation
 
-- OSDP deployment: 
-<img width="858" alt="image" src="https://user-images.githubusercontent.com/85312798/169662228-b6afe5ec-5d56-4aa7-92dd-6e6c12af456f.png">
-
-- Execute the  **train.py**  file through the  **scripts/script_gpt2_training.sh**  script, and deploy the OSDP experiment by specifying fsdp_type as OSDP (specify fsdp_type as FSDP to deploy the comparative experiment).
+Execute the  **train.py**  file through the  **scripts/script_gpt2_training.sh**  script, and deploy the OSDP experiment by specifying fsdp_type as OSDP (specify fsdp_type as FSDP to deploy the comparative experiment).
 
 #### Experimental results
 
