@@ -18,7 +18,7 @@ Example of Optimal Sharded Data Parallel (OSDP) training GPT-2.
 
 ## Implementation
 
-OSDP deployment:
+Example using OSDP:
 
 ```
 from data_parallel.optimal_sharded_data_parallel import OptimalShardedDataParallel as OSDP
