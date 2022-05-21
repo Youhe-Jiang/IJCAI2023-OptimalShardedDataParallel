@@ -14,6 +14,7 @@ Cancel changes
 
 - 48 layers
 - hidden size 1536
+- 1.542B params
 
 #### Implementation
 
