@@ -6,8 +6,8 @@ Example of Optimal Sharded Data Parallel (OSDP) training GPT-2.
 
 #### Environment
 
-- torch version 1.11.0+cu102
-- fairscale version 0.4.5
+- PyTorch version 1.11.0+cu102
+- Fairscale version 0.4.5
 - Memory limit: 8 GB
 
 #### Model config
