@@ -18,7 +18,27 @@ Example of Optimal Sharded Data Parallel (OSDP) training GPT-2.
 
 #### Implementation
 
+OSDP deployment:
+
+```
+from data_parallel.optimal_sharded_data_parallel import OptimalShardedDataParallel as OSDP
+...
+sharded_module = OSDP(my_module, model_description, device_information)
+optim = torch.optim.Adam(sharded_module.parameters(), lr=0.0001)
+for sample, label in dataload.next_batch:
+  out = sharded_module(x=sample, y=3, z=torch.Tensor([1]))
+  loss = criterion(out, label)
+  loss.backward()
+  optim.step(
+```
+
+#### Running OSDP
+
 Execute the  **train.py**  file through the  **scripts/script_gpt2_training.sh**  script, and deploy the OSDP experiment by specifying fsdp_type as OSDP (specify fsdp_type as FSDP to deploy the comparative experiment).
+
+```
+$ sh scripts/script_gpt2_training.sh
+```
 
 #### Experimental results
 
