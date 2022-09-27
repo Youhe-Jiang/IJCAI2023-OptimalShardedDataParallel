@@ -36,13 +36,7 @@ $ sh scripts/script_gpt2_training.sh
 
 ## Experimental results
 
-### GPT configs:
-
-- 48 layers
-- hidden size 1536
-- 1.542B params
-
-In OSDP, we maximize overall system throughput by maximizing device memory utilization. Since system throughput varies with the environment, and device memory utilization depends on the specific model, we demonstrate the device memory utilization and overall system throughput (in our environment) of OSDP and FSDP tasks respectively.
+In OSDP, we maximize overall system throughput by maximizing device memory utilization. Since system throughput varies with the environment, and device memory utilization depends on the specific model, we demonstrate the device memory utilization and overall system throughput (in our environment) of OSDP and FSDP training GPT-2 model with 48 layers, hidden size 2048 (1.542B params).
 
 - OSDP: 
   - device memory utilization: 8057.35 MB / 8192 MB  
