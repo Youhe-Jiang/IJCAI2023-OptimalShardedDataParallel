@@ -69,7 +69,7 @@ Increase system throughput by reducing inter-machine communication parameters (u
 
 ## Implementation
 
-Example of using Group Sharding training bert-large with world_size 4 and group_size 2:
+Example of using Group Sharding training bert-large with 2 machines and 4 GPUs:
 
 ```
 fsdp_args = gen_fsdp_args(nnodes=2, nproc_per_node=2, gsdp_type='group_sharding', model_type='bert-large')
@@ -78,7 +78,7 @@ with enable_wrap(wrapper_cls=FSDP, **fsdp_args):
         model = auto_wrap(model, auto_wrap_policy=my_auto_wrap_policy) #auto_wrap
 ```
 
-Example of using Communication with groups training bert-large with world_size 4 and group_size 2:
+Example of using Communication with groups training bert-large with 2 machines and 4 GPUs:
 
 ```
 fsdp_args = gen_fsdp_args(nnodes=2, nproc_per_node=2, gsdp_type='communication_with_groups', model_type='bert-large')
