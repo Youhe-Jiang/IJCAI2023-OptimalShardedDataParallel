@@ -36,7 +36,7 @@ $ sh scripts/script_gpt2_training.sh
 
 ## Experimental results
 
-### Model config
+### GPT configs:
 
 - 48 layers
 - hidden size 1536
