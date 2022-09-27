@@ -91,7 +91,7 @@ with enable_wrap(wrapper_cls=FSDP, **fsdp_args):
 
 We provide an example of OSDP training bert with Group Sharding & Communication with groups:
 
-Execute the  **train_bert.py**  file through the  **scripts/script_bert_training.sh**  script, and deploy the Group Sharding and Communication with groups experiments by specifying fsdp_args as 'group_sharding' or 'communication_with_groups' (specify fsdp_args as 'None' to deploy the comparative experiment).
+Execute the  **train_bert.py**  file through the  **scripts/script_bert_training.sh**  script, and deploy the Group Sharding or Communication with groups experiment by specifying fsdp_args as 'group_sharding' or 'communication_with_groups' (specify fsdp_args as 'None' to deploy the comparative experiment).
 
 ```
 $ sh scripts/script_bert_training.sh
