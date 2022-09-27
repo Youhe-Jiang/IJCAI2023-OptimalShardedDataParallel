@@ -69,7 +69,7 @@ Increase system throughput by reducing inter-machine communication parameters (u
 
 ## Implementation
 
-Example of using Group Sharding training bert-large with 2 machines and 4 GPUs:
+Example of using Group Sharding training bert-large with 2 machines and 4 GPUs (we use the auto_wrap API provided by fairscale to complete sharded data parallel deployment):
 
 ```
 fsdp_args = gen_fsdp_args(nnodes=2, nproc_per_node=2, gsdp_type='group_sharding', model_type='bert-large')
