@@ -2,19 +2,13 @@
 
 ## Description
 
-Example of Optimal Sharded Data Parallel (OSDP) training GPT-2.
+Optimal Sharded Data Parallel (OSDP), an automated parallel training system that combines the advantages from both data and model parallelism.
 
 ## Environment
 
 - torch version 1.11.0+cu102
 - fairscale version 0.4.5
 - device memory limit: 8 GB
-
-## Model config
-
-- 48 layers
-- hidden size 1536
-- 1.542B params
 
 ## Implementation
 
@@ -41,6 +35,12 @@ $ sh scripts/script_gpt2_training.sh
 ```
 
 ## Experimental results
+
+### Model config
+
+- 48 layers
+- hidden size 1536
+- 1.542B params
 
 In OSDP, we maximize overall system throughput by maximizing device memory utilization. Since system throughput varies with the environment, and device memory utilization depends on the specific model, we demonstrate the device memory utilization and overall system throughput (in our environment) of OSDP and FSDP tasks respectively.
 
