@@ -2,7 +2,7 @@
 
 ## Description
 
-### Optimal Sharded Data Parallel (OSDP), an automated parallel training system that combines the advantages from both data and model parallelism.
+Optimal Sharded Data Parallel (OSDP), an automated parallel training system that combines the advantages from both data and model parallelism.
 
 ## Environment
 
