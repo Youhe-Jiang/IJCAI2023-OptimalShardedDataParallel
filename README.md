@@ -18,7 +18,7 @@ The following command create the conda environment to be used:
 $ conda env create -f environment.yml
 ```
 
-Or create the environment by:
+Or prepare the environment by:
 
 ```
 $ sh prepare_env.sh
