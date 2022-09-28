@@ -1,0 +1,11 @@
+name: osdp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pip:
+    - torch==1.10.2
+    - fairscale==0.4.5
+    - transformers==4.16.2
+    - h5py==3.6.0
