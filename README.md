@@ -1,5 +1,9 @@
 # OptimalShardedDataParallel
 
+## Paper
+
+Youhe Jiang, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://arxiv.org/abs/2209.13258). [ICML Hardware Aware Efficient Training (HAET) Workshop 2022](https://icml.cc/Conferences/2022/ScheduleMultitrack?event=13462#wse-detail-20407).
+
 ## Description
 
 Optimal Sharded Data Parallel (OSDP), an automated parallel training system that combines the advantages from both data and model parallelism, which has a number of advanced characteristics:
@@ -130,10 +134,6 @@ $ sh scripts/script_bert_large_group_sharding.sh
 $ sh scripts/script_bert_large_communication_with_groups.sh
 $ sh scripts/script_bert_large_fsdp.sh
 ```
-
-# Paper
-
-Youhe Jiang, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://arxiv.org/abs/2209.13258). [ICML Hardware Aware Efficient Training (HAET) Workshop 2022](https://icml.cc/Conferences/2022/ScheduleMultitrack?event=13462#wse-detail-20407).
 
 # Cite
 
