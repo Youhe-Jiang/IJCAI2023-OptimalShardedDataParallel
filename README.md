@@ -106,10 +106,21 @@ Youhe Jiang, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Para
 If you use OSDP in a scientific publication, we would appreciate citations to the following paper:
 
 ```
- @article{jiang2022osdp,
-   title={OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning},
-   author={Jiang, Youhe and Miao, Xupeng and Nie, Xiaonan and Cui, Bin},
-   journal={arXiv preprint arXiv:2209.13258},
-   year={2022}
- }
+@misc{https://doi.org/10.48550/arxiv.2209.13258,
+  doi = {10.48550/ARXIV.2209.13258},
+  
+  url = {https://arxiv.org/abs/2209.13258},
+  
+  author = {Jiang, Youhe and Miao, Xupeng and Nie, Xiaonan and Cui, Bin},
+  
+  keywords = {Distributed, Parallel, and Cluster Computing (cs.DC), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {Creative Commons Attribution 4.0 International}
+}
 ```
