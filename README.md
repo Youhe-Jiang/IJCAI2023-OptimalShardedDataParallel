@@ -94,3 +94,16 @@ $ sh scripts/script_bert_training.sh
 # Paper
 
 Youhe Jiang, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://arxiv.org/abs/2209.13258). [ICML Hardware Aware Efficient Training (HAET) Workshop 2022](https://icml.cc/Conferences/2022/ScheduleMultitrack?event=13462#wse-detail-20407).
+
+# Cite
+
+If you use OSDP in a scientific publication, we would appreciate citations to the following paper:
+
+```
+ @article{jiang2022osdp,
+   title={OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning},
+   author={Jiang, Youhe and Miao, Xupeng and Nie, Xiaonan and Cui, Bin},
+   journal={arXiv preprint arXiv:2209.13258},
+   year={2022}
+ }
+```
