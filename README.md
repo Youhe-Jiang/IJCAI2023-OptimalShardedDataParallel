@@ -37,7 +37,7 @@ for sample, label in dataload.next_batch:
   out = sharded_module(x=sample, y=3, z=torch.Tensor([1]))
   loss = criterion(out, label)
   loss.backward()
-  optim.step(
+  optim.step()
 ```
 
 ## Running OSDP
