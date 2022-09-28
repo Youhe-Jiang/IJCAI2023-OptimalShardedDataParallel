@@ -15,13 +15,13 @@ Feel free to contribute codes, create issues and pull requests.
 The following command create the conda environment to be used:
 
 ```
-conda env create -f environment.yml
+$ conda env create -f environment.yml
 ```
 
 Or create the environment by:
 
 ```
-sh prepare_env.sh
+$ sh prepare_env.sh
 ```
 
 ## Implementation
@@ -42,10 +42,12 @@ for sample, label in dataload.next_batch:
 
 ## Running OSDP
 
-Execute the  **train.py**  file through the  **scripts/script_gpt2_training.sh**  script, and deploy the OSDP experiment by specifying fsdp_type as OSDP (specify fsdp_type as FSDP to deploy the comparative experiment).
+Execute the  **train_gpt2_...py**  file through the  **scripts/script_gpt2_...sh**  script, and deploy the OSDP experiment by specifying fsdp_type as OSDP (specify fsdp_type as FSDP to deploy the comparative experiment).
 
 ```
-$ sh scripts/script_gpt2_training.sh
+$ cd gpt
+$ sh scripts/script_gpt2_osdp.sh
+$ sh scripts/script_gpt2_fsdp.sh
 ```
 
 ## Experimental results
@@ -99,10 +101,13 @@ with enable_wrap(wrapper_cls=FSDP, **fsdp_args):
 
 We provide an example of OSDP training bert with Group Sharding & Communication with groups:
 
-Execute the  **train_bert.py**  file through the  **scripts/script_bert_training.sh**  script, and deploy the Group Sharding or Communication with groups experiment by specifying fsdp_args as 'group_sharding' or 'communication_with_groups' (specify fsdp_args as 'none' to deploy the comparative experiment).
+Execute the  **train_bert_large...py**  file through the  **scripts/script_bert_large_...sh**  script, and deploy the Group Sharding or Communication with groups experiment by specifying fsdp_args as 'group_sharding' or 'communication_with_groups' (specify fsdp_args as 'none' to deploy the comparative experiment).
 
 ```
-$ sh scripts/script_bert_training.sh
+$ cd bert
+$ sh scripts/script_bert_large_group_sharding.sh
+$ sh scripts/script_bert_large_communication_with_groups.sh
+$ sh scripts/script_bert_large_fsdp.sh
 ```
 
 # Paper
