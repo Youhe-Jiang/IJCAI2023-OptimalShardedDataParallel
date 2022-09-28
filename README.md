@@ -61,6 +61,27 @@ In OSDP, we maximize overall system throughput by maximizing device memory utili
   - device memory utilization: 5656.91 MB / 8192 MB  
   - overall system throughput: 158.0486313692509 seq/sec
 
+# Operator splitting
+
+## Description
+
+Operator splitting provides OSDP with the ability to search for a finer-grained execution plan for the model as well as minimizes memory surge in training, which provides OSDP with the ability to undertake a larger batch size and further optimize the system throughput.
+
+## Implementation
+
+Example using operator splitting:
+
+```
+class Layer(nn.Module):
+  def __init__(self, config):
+    self.mlp = splitted_linear(config...)
+    ...
+  
+  def forward(self, input):
+    output = splitted_linear_forward(input, self.mlp, num_splits)
+    ...
+```
+
 # New features: Group Sharding & Communication with groups
 
 ## Group Sharding
