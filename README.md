@@ -12,9 +12,17 @@ Feel free to contribute codes, create issues and pull requests.
 
 ## Environment
 
-- torch version 1.11.0+cu102
-- fairscale version 0.4.5
-- device memory limit: 8 GB
+The following command create the conda environment to be used:
+
+```
+conda env create -f environment.yml
+```
+
+Or create the environment by:
+
+```
+sh prepare_env.sh
+```
 
 ## Implementation
 
