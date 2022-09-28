@@ -52,7 +52,7 @@ $ sh scripts/script_gpt2_fsdp.sh
 
 ## Experimental results
 
-In OSDP, we maximize overall system throughput by maximizing device memory utilization. Since system throughput varies with the environment, and device memory utilization depends on the specific model, we show the system throughput and memory utilization of GPT-2 model in our environment (GPU memory limit: 8G):
+We show the system throughput and memory utilization of GPT-2 model training (48 layers with hidden_size 2048) in our environment (GPU memory limit: 8G):
 
 - OSDP: 
   - device memory utilization: 8057.35 MB / 8192 MB  
