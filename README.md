@@ -4,6 +4,10 @@
 
 Optimal Sharded Data Parallel (OSDP), an automated parallel training system that combines the advantages from both data and model parallelism.
 
+- Efficiency: OSDP breaks the memory redundancy minimization limitation in previous ZeRO-based systems and enables to determine whether to perform parameter sharding for each operator individually. In addition, OSDP supports operator splitting and fine-grained memory management, enlarging the entire decision space.
+- Flexibility: OSDP provides an efficient search engine to automatically find the optimal parallel strategies for each operator in the computation graph and eventually generates the execution plans.
+- Usability:  only a few lines of code is needed to be replaced to complete the OSDP deployment.
+
 ## Environment
 
 - torch version 1.11.0+cu102
