@@ -130,31 +130,3 @@ $ sh scripts/script_bert_large_group_sharding.sh
 $ sh scripts/script_bert_large_communication_with_groups.sh
 $ sh scripts/script_bert_large_fsdp.sh
 ```
-
-# Paper
-
-Youhe Jiang, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://arxiv.org/abs/2209.13258). [ICML Hardware Aware Efficient Training (HAET) Workshop 2022](https://icml.cc/Conferences/2022/ScheduleMultitrack?event=13462#wse-detail-20407).
-
-# Cite
-
-If you use OSDP in a scientific publication, we would appreciate citations to the following paper:
-
-```
-@misc{https://doi.org/10.48550/arxiv.2209.13258,
-  doi = {10.48550/ARXIV.2209.13258},
-  
-  url = {https://arxiv.org/abs/2209.13258},
-  
-  author = {Jiang, Youhe and Miao, Xupeng and Nie, Xiaonan and Cui, Bin},
-  
-  keywords = {Distributed, Parallel, and Cluster Computing (cs.DC), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning},
-  
-  publisher = {arXiv},
-  
-  year = {2022},
-  
-  copyright = {Creative Commons Attribution 4.0 International}
-}
-```
