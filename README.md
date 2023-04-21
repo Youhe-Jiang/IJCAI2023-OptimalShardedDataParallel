@@ -135,3 +135,16 @@ $ sh scripts/script_bert_large_group_sharding.sh
 $ sh scripts/script_bert_large_communication_with_groups.sh
 $ sh scripts/script_bert_large_fsdp.sh
 ```
+## Cite
+
+If you use OSDP in a scientific publication, we would appreciate citations to the following paper:
+```
+@misc{jiang2022osdp,
+      title={OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning}, 
+      author={Youhe Jiang and Xupeng Miao and Xiaonan Nie and Bin Cui},
+      year={2022},
+      eprint={2209.13258},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC}
+}
+```
