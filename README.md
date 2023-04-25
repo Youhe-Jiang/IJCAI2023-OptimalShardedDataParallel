@@ -45,7 +45,7 @@ for sample, label in dataload.next_batch:
   optim.step()
 ```
 
-## Running OSDP
+## OSDP training for GPT models 
 
 Execute the  **train_gpt2_...py**  file through the  **scripts/script_gpt2_...sh**  script, and deploy the OSDP experiment by specifying fsdp_type as OSDP (specify fsdp_type as FSDP to deploy the comparative experiment).
 
@@ -55,7 +55,7 @@ $ sh scripts/script_gpt2_osdp.sh
 $ sh scripts/script_gpt2_fsdp.sh
 ```
 
-## Experimental results
+### Experimental results
 
 We show the system throughput and memory utilization of GPT-2 model training (48 layers with hidden_size 2048) in our environment (GPU memory limit: 8G):
 
@@ -66,7 +66,7 @@ We show the system throughput and memory utilization of GPT-2 model training (48
   - device memory utilization: 5656.91 MB / 8192 MB  
   - overall system throughput: 158.0486313692509 seq/sec
 
-# OPT
+## OSDP training for OPT models
 
 We add OSDP implementation for OPT models. The following instructions can deploy the OPT-30B (8 layers) training on a single machine with 8 GPUs and memory limit 16GB.
 
@@ -76,7 +76,7 @@ $ sh scripts/train_fsdp.sh
 $ sh scripts/train_osdp.sh
 ```
 
-## Experimental results
+### Experimental results
 
 - OSDP: 
   - device memory utilization: 15985.89 MB / 16384 MB  
