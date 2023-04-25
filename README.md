@@ -66,27 +66,6 @@ We show the system throughput and memory utilization of GPT-2 model training (48
   - device memory utilization: 5656.91 MB / 8192 MB  
   - overall system throughput: 158.0486313692509 seq/sec
 
-# Operator splitting
-
-## Description
-
-Operator splitting provides OSDP with the ability to search for a finer-grained execution plan for the model as well as minimizes memory surge in training, which provides OSDP with the ability to undertake a larger batch size and further optimize the system throughput.
-
-## Implementation
-
-Example using operator splitting:
-
-```
-class Layer(nn.Module):
-  def __init__(self, config):
-    self.mlp = splitted_linear(config...)
-    ...
-  
-  def forward(self, input):
-    output = splitted_linear_forward(input, self.mlp, num_splits)
-    ...
-```
-
 # OPT
 
 We add OSDP implementation for OPT models. The following instructions can deploy the OPT-30B (8 layers) training on a single machine with 8 GPUs and memory limit 16GB.
@@ -106,23 +85,44 @@ $ sh scripts/train_osdp.sh
   - device memory utilization: 14802.88 MB / 16384 MB  
   - overall system throughput: 453.18 seq/sec
 
-# Group Sharding & Communication with groups
+## Feature: Operator splitting
 
-## Group Sharding
+### Description
+
+Operator splitting provides OSDP with the ability to search for a finer-grained execution plan for the model as well as minimizes memory surge in training, which provides OSDP with the ability to undertake a larger batch size and further optimize the system throughput.
+
+### Implementation
+
+Example using operator splitting:
+
+```
+class Layer(nn.Module):
+  def __init__(self, config):
+    self.mlp = splitted_linear(config...)
+    ...
+  
+  def forward(self, input):
+    output = splitted_linear_forward(input, self.mlp, num_splits)
+    ...
+```
+
+## Feature: Group Sharding & Communication with groups
+
+### Group Sharding
 
 - Stage 1: Intra-group Sharded Data Parallel.
 - Stage 2: Inter-group All-Reduce.
 
 Trade-off between memory consumption and system throughput for more efficient use of inter-machine bandwidth.
 
-## Communication with groups
+### Communication with groups
 
 - Stage 1: Intra-group All-Gather and Reduce-Scatter during the Sharded Data Parallel process.
 - Stage 2: Inter-group All-Gather and Reduce-Scatter during the Sharded Data Parallel process.
 
 Increase system throughput by reducing inter-machine communication parameters (usually the inter-machine bandwidth is much lower than the intra-machine bandwidth).
 
-## Implementation
+### Implementation
 
 Example of using Group Sharding training bert-large with 2 machines and 4 GPUs (we use the auto_wrap API provided by fairscale to complete sharded data parallel deployment):
 
@@ -142,7 +142,7 @@ with enable_wrap(wrapper_cls=FSDP, **fsdp_args):
         model = auto_wrap(model, auto_wrap_policy=my_auto_wrap_policy) #auto_wrap
 ```
 
-## Running Group Sharding & Communication with groups
+### Running Group Sharding & Communication with groups
 
 We provide an example of OSDP training bert with Group Sharding & Communication with groups:
 
