@@ -87,7 +87,7 @@ class Layer(nn.Module):
     ...
 ```
 
-# [New model] OPT
+# OPT
 
 We add OSDP implementation for OPT models. The following instructions can deploy the OPT-30B (8 layers) training on a single machine with 8 GPUs and memory limit 16GB.
 
@@ -106,7 +106,7 @@ $ sh scripts/train_osdp.sh
   - device memory utilization: 14802.88 MB / 16384 MB  
   - overall system throughput: 453.18 seq/sec
 
-# [New features] Group Sharding & Communication with groups
+# Group Sharding & Communication with groups
 
 ## Group Sharding
 
