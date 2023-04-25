@@ -15,25 +15,6 @@ Feel free to contribute codes, create issues and pull requests.
 
 * Youhe Jiang, Fangcheng Fu, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://arxiv.org/abs/2209.13258). In Proceedings of the 32nd International Joint Conference on Artificial Intelligence (IJCAI), August 2023.
 
-# New model: OPT
-
-We add OSDP implementation for OPT models. The following instructions can deploy the OPT-30B (8 layers) training on a single machine with 8 GPUs and memory limit 16GB.
-
-```
-$ cd opt
-$ sh scripts/train_fsdp.sh
-$ sh scripts/train_osdp.sh
-```
-
-## Experimental results
-
-- OSDP: 
-  - device memory utilization: 15985.89 MB / 16384 MB  
-  - overall system throughput: 1261.98 seq/sec
-- FSDP:
-  - device memory utilization: 14802.88 MB / 16384 MB  
-  - overall system throughput: 453.18 seq/sec
-
 ## Environment
 
 The following command create the conda environment to be used:
@@ -85,6 +66,25 @@ We show the system throughput and memory utilization of GPT-2 model training (48
   - device memory utilization: 5656.91 MB / 8192 MB  
   - overall system throughput: 158.0486313692509 seq/sec
 
+# [New model] OPT
+
+We add OSDP implementation for OPT models. The following instructions can deploy the OPT-30B (8 layers) training on a single machine with 8 GPUs and memory limit 16GB.
+
+```
+$ cd opt
+$ sh scripts/train_fsdp.sh
+$ sh scripts/train_osdp.sh
+```
+
+## Experimental results
+
+- OSDP: 
+  - device memory utilization: 15985.89 MB / 16384 MB  
+  - overall system throughput: 1261.98 seq/sec
+- FSDP:
+  - device memory utilization: 14802.88 MB / 16384 MB  
+  - overall system throughput: 453.18 seq/sec
+
 # Operator splitting
 
 ## Description
@@ -106,7 +106,7 @@ class Layer(nn.Module):
     ...
 ```
 
-# New features: Group Sharding & Communication with groups
+# [New features] Group Sharding & Communication with groups
 
 ## Group Sharding
 
