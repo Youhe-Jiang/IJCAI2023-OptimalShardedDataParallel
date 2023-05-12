@@ -8,14 +8,18 @@ Optimal Sharded Data Parallel (OSDP), an automated parallel training system that
 - Flexibility: OSDP provides an efficient search engine to automatically find the optimal parallel strategies for each operator in the computation graph and eventually generates the execution plans.
 - Usability:  only a few lines of code is needed to be replaced to complete the OSDP deployment.
 
-<img width="698" alt="image" src="https://github.com/Youhe-Jiang/IJCAI2023-OptimalShardedDataParallel/assets/85312798/a2b76c27-28ea-4590-afc6-afce9191e31e">
-
 Feel free to contribute codes, create issues and pull requests.
 
 ## Papers
 * Youhe Jiang, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://icml.cc/virtual/2022/workshop/13462). In Proceedings of ICML Hardware Aware Efficient Training (HAET) Workshop, July 2022.
 
 * Youhe Jiang, Fangcheng Fu, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://arxiv.org/abs/2209.13258). In Proceedings of the 32nd International Joint Conference on Artificial Intelligence (IJCAI), August 2023.
+
+## OSDP System Architecture
+
+OSDP is consists of three modules, including a profiler, a search engine and a schedular. The profiler takes model description and device information as input, the schedular outputs the optimal execution plan.
+
+<img width="698" alt="image" src="https://github.com/Youhe-Jiang/IJCAI2023-OptimalShardedDataParallel/assets/85312798/b6a094b7-a5d9-488f-9fec-59597d0afd67">
 
 ## Environment
 
