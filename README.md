@@ -15,12 +15,6 @@ Feel free to contribute codes, create issues and pull requests.
 
 * Youhe Jiang, Fangcheng Fu, Xupeng Miao, Xiaonan Nie, Bin Cui. [OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning](https://arxiv.org/abs/2209.13258). In Proceedings of the 32nd International Joint Conference on Artificial Intelligence (IJCAI), August 2023.
 
-## OSDP System Architecture
-
-OSDP is consists of three modules, including a profiler, a search engine and a schedular. The profiler takes model description and device information as input, the schedular outputs the optimal execution plan.
-
-<div align=center> <img width="500" alt="image" src="https://github.com/Youhe-Jiang/IJCAI2023-OptimalShardedDataParallel/assets/85312798/b6a094b7-a5d9-488f-9fec-59597d0afd67"> </div>
-
 ## Environment
 
 The following command create the conda environment to be used:
