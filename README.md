@@ -158,10 +158,10 @@ $ sh scripts/script_bert_large_fsdp.sh
 
 If you use OSDP in a scientific publication, we would appreciate citations to the following paper:
 ```
-@misc{jiang2022osdp,
+@misc{jiang2023osdp,
       title={OSDP: Optimal Sharded Data Parallel for Distributed Deep Learning}, 
-      author={Youhe Jiang and Xupeng Miao and Xiaonan Nie and Bin Cui},
-      year={2022},
+      author={Youhe Jiang and Fangcheng Fu and Xupeng Miao and Xiaonan Nie and Bin Cui},
+      year={2023},
       eprint={2209.13258},
       archivePrefix={arXiv},
       primaryClass={cs.DC}
